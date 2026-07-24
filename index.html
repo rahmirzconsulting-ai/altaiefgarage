@@ -107,12 +107,12 @@ body.nav-open .m-nav{opacity:1;pointer-events:auto}
 .disc .tag{position:absolute;bottom:8%;right:2%;background:var(--red);color:#fff;font:700 .72rem var(--fh);letter-spacing:.16em;padding:11px 20px;border-radius:999px;box-shadow:0 12px 30px rgba(225,37,27,.4)}
 
 /* ---------- marquee ---------- */
-.marquee{background:var(--red);padding:16px 0;overflow:hidden;transform:rotate(-1.2deg) scale(1.02);border-block:1px solid rgba(0,0,0,.2)}
+.marquee{background:var(--red);padding:16px 0;overflow:hidden;border-block:1px solid rgba(0,0,0,.2)}
 .mq-track{display:flex;gap:54px;width:max-content;animation:mq 30s linear infinite}
 .mq-track span{font:800 1.05rem var(--fh);letter-spacing:.14em;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:54px}
 .mq-track span::after{content:"●";font-size:.55rem;color:rgba(255,255,255,.65)}
 @keyframes mq{to{transform:translateX(-50%)}}
-.marquee-wrap{background:var(--black);padding:26px 0 40px;overflow:hidden}
+.marquee-wrap{background:var(--black);padding:0 0 34px;overflow:hidden}
 
 /* ---------- light sections ---------- */
 .light{background:var(--paper);color:var(--ink)}
@@ -248,7 +248,6 @@ footer{background:var(--black);border-top:1px solid var(--line-soft);padding:56p
   .hstat{padding-right:22px;margin-right:22px}
   .hstat b{font-size:1.5rem}
   .values{grid-template-columns:repeat(3,1fr);gap:10px}
-  .marquee{transform:none}
 }
 </style>
 </head>
@@ -515,6 +514,12 @@ footer{background:var(--black);border-top:1px solid var(--line-soft);padding:56p
       </div>
       <div class="map rv" style="--d:.18s">
         <iframe title="Al Taief Garage location map" src="https://maps.google.com/maps?q=Al%20Taief%20Garage%2C%20Al%20Qusais%20Industrial%20Area%2C%20Dubai&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="rv" style="--d:.24s;text-align:center;margin-top:36px">
+        <a class="btn btn-red" href="https://www.google.com/maps/dir/?api=1&destination=Al+Taief+Garage,+Al+Qusais+Industrial+Area+1,+Dubai,+UAE" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          Get Directions
+        </a>
       </div>
     </div>
   </div>
