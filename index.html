@@ -77,7 +77,7 @@ h2.title{font:800 clamp(1.9rem,4vw,3rem)/1.12 var(--fh);letter-spacing:-.02em;ma
 body.nav-open .burger i:nth-child(1){top:23px;transform:rotate(45deg)}
 body.nav-open .burger i:nth-child(2){opacity:0}
 body.nav-open .burger i:nth-child(3){top:23px;transform:rotate(-45deg)}
-.m-nav{position:fixed;inset:0;z-index:101;background:rgba(11,11,12,.97);backdrop-filter:blur(10px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;opacity:0;pointer-events:none;transition:opacity .4s}
+.m-nav{position:fixed;inset:0;z-index:99;background:rgba(11,11,12,.97);backdrop-filter:blur(10px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;opacity:0;pointer-events:none;transition:opacity .4s}
 body.nav-open .m-nav{opacity:1;pointer-events:auto}
 .m-nav a{font:700 1.5rem var(--fh);color:#fff}
 .m-nav a:hover{color:var(--red)}
@@ -270,6 +270,7 @@ footer{background:var(--black);border-top:1px solid var(--line-soft);padding:56p
 .to-top.show{opacity:1;pointer-events:auto}
 .to-top:hover{background:var(--red);border-color:var(--red)}
 
+.m-cta{display:none}
 /* ---------- responsive ---------- */
 @media(max-width:1020px){
   .svc-grid{grid-template-columns:repeat(2,1fr)}
@@ -286,6 +287,7 @@ footer{background:var(--black);border-top:1px solid var(--line-soft);padding:56p
 @media(max-width:720px){
   .nav{display:none}
   .burger{display:block}
+  .m-cta{display:inline-flex;padding:10px 17px;font-size:.79rem;margin-left:auto;margin-right:10px;white-space:nowrap}
   .pad{padding:80px 0}
   .svc-grid,.steps,.contact-grid{grid-template-columns:1fr}
   .hstat{padding-right:22px;margin-right:22px}
@@ -293,6 +295,16 @@ footer{background:var(--black);border-top:1px solid var(--line-soft);padding:56p
   .values{grid-template-columns:repeat(3,1fr);gap:10px}
   .team-strip{grid-template-columns:1fr}
   .team-owner{gap:20px}
+}
+@media(max-width:480px){.site-head .brand div{display:none}}
+@media(max-width:720px){
+  .about-grid,.vm-grid,.why-grid,.steps,.contact-grid,.team-strip,.svc-grid{grid-template-columns:minmax(0,1fr)}
+  .parts-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .values{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .about-copy,.about-card,.vm-card,.svc,.part,.step,.c-card,.map,.value,.t-mem,.mile span,.c-row div{min-width:0}
+}
+@media(max-width:480px){
+  .parts-grid,.values{grid-template-columns:minmax(0,1fr)}
 }
 </style>
 </head>
@@ -315,6 +327,7 @@ footer{background:var(--black);border-top:1px solid var(--line-soft);padding:56p
       <a class="nl" href="#contact">Contact</a>
       <a class="btn btn-red" href="https://wa.me/971562111232?text=Hello%20Al%20Taief%20Garage%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20my%20vehicle." target="_blank" rel="noopener" style="padding:11px 22px">Book Appointment</a>
     </nav>
+    <a class="btn btn-red m-cta" href="https://wa.me/971562111232?text=Hello%20Al%20Taief%20Garage%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20my%20vehicle." target="_blank" rel="noopener">Book Appointment</a>
     <button class="burger" id="burger" aria-label="Menu"><i></i><i></i><i></i></button>
   </div>
 </header>
